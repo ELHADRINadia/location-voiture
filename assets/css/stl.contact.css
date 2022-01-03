@@ -80,15 +80,15 @@ h2:after {
     width: 100%;
     border: 2px solid rgba(0, 0, 0, 0);
     outline: none;
-    background-color: rgba(230, 230, 230, 0.6);
+    background-color: #5c6664;
     padding: 0.5rem 1rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 22px;
     transition: .3s;
 }
 
 .field:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 textarea {

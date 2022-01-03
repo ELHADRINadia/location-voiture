@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location-voiture</title>
     <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/reservation.css">
+
+
 </head>
 
 <body>
@@ -22,237 +25,136 @@
             </ul>
         </nav>
     </header>
-    <br> <br> <br> <br> <br> <br> <br> <br>
-    <form method="POST" action="#">
-        <div>
-            <div id='d1'>
-                <label>Type:</label>
-                <select onclick="f()" name="Type véhicule" id="s1">
-        <option value="" name="Type" disabled selected></option>
-        <option value="" name="Type" >Moto</option>
-        <option value="" name="Type">Citadine</option>
-        <option value="" name="Type" >Compact</option>
-        <option value="" name="Type" >Berline</option>
-        <option value="" name="Type" >Utilaitaire</option>
-        <option value="" name="Type" >Engin de chantier</option>
-        <option value="" name="Type" >Camio</option>
-        </select>
-            </div><br>
+    <form>
+        <div id="fieldset">
 
-
-            <div id='d2'>
-                <label> carburant: </label>
-                <select name="Carburant" id="s2">
-           <option value="" name="carburant" disabled selected ></option></select>
+            <div id="Vehicle_type">
+                <label>choose a car type</label>
+                <br>
+                <span class="Radio_button">
+                <input onclick="Vehicle_type(this.value)" value="Moto" type="radio" name="vehicle-type" id="Moto">
+                <label for="Moto">Motorcycle</label>  
+                <span>10£/Day</span>
+                </span>
+                <span class="Radio_button">
+                <input onclick="Vehicle_type(this.value)" value="Citadine" type="radio" name="vehicle-type" id="Citadine">
+                <label for="Citadine">Citadine(Supermini)</label>
+                <span>12£/Day</span>
+                </span>
+                <span class="Radio_button">
+                <input onclick="Vehicle_type(this.value)" value="Compact" type="radio" name="vehicle-type" id="Compact">
+                <label for="Compact">Compact</label> 
+                <span>14£/Day</span>
+                </span>
+                <span class="Radio_button">
+                <input onclick="Vehicle_type(this.value)" value="Berline" type="radio" name="vehicle-type" id="Berline">
+                <label for="Berline">Berline</label>
+                <span>20£/Day</span>
+                </span>
+                <span class="Radio_button">
+                <input onclick="Vehicle_type(this.value)" value="Uv" type="radio" name="vehicle-type" id="Uv">
+                <label for="Uv">Utility vehicle</label>  
+                <span>16£/Day</span>
+                </span>
+                <span class="Radio_button">
+                <input onclick="Vehicle_type(this.value)" value="Cm" type="radio" name="vehicle-type" id="Cm">
+                <label for="Cm">Construction machinery</label> 
+                <span>900£/Day</span>
+                </span>
+                <span class="Radio_button">
+                <input onclick="Vehicle_type(this.value)" value="Truck" type="radio" name="vehicle-type" id="Truck">
+                <label for="Truck">Truck</label>
+                <span>250£/Day</span>
+                </span>
             </div>
-            <br>
-
+            <div id="transmission">
+                <p><span>Transmission: </span> <span id="ts"></span></p>
+            </div>
+            <div id="radiobuttons">
+                <label for="">Power type: </label>
+                <span>
+                <input name="energy-type" class="energy-type" type="radio" value="Electic">
+                <label>Electic</label>
+    
+            </span>
+                <span>
+                <input name="energy-type" class="energy-type" type="radio" value="Hybrid">
+                <label>Hybrid</label>
+                
+            </span>
+                <span>
+                <input name="energy-type" class="energy-type" type="radio" value="Gasoline">
+                <label>Gasoline</label>
+                
+            </span>
+                <span>
+                <input name="energy-type" class="energy-type" type="radio" value="Diesel">
+                <label>Diesel</label>
+                
+            </span>
+            </div>
+            <div id="time">
+                <p>Enter how many days: </p>
+                <span><input placeholder="Days"  min="1" id="days" type="number" ></span>
+            </div>
+            <div id="calc">
+                <button onclick="calculate()">Calculate</button>
+            </div>
+            <div id="result">
+                <p>
+                    <span>money is:</span>
+                    <span id="result_p"></span>
+                </p>
+            </div>
 
         </div>
     </form>
 
 
-
-    <footer class="footer">
-        <div class="containent">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>company</h4>
+    <footer class="footer ">
+        <div class="containent ">
+            <div class="row ">
+                <div class="footer-col ">
+                    <h4>Entreprise</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
+                        <li><a href="# ">index</a></li>
+                        <li><a href="# ">Gallerie</a></li>
+                        <li><a href="# ">Reservation</a></li>
+                        <li><a href="# ">Contact us</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>get help</h4>
+                <div class="footer-col ">
+                    <h4>Obtenir de l'aide</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
+                        <li><a href="# ">FAQ</a></li>
+                        <li><a href="# ">returns</a></li>
+                        <li><a href="# ">order status</a></li>
+                        <li><a href="# ">payment options</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>online shop</h4>
+                <div class="footer-col ">
+                    <h4>Enline Reserve</h4>
                     <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
+                        <li><a href="# ">Moto</a></li>
+                        <li><a href="# ">Citadine</a></li>
+                        <li><a href="# ">camio</a></li>
+                        <li><a href="# ">Utilitaire</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div class="footer-col ">
                     <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="social-links ">
+                        <a href="# "><i class="fab fa-facebook-f "></i></a>
+                        <a href="# "><i class="fab fa-twitter "></i></a>
+                        <a href="# "><i class="fab fa-instagram "></i></a>
+                        <a href="# "><i class="fab fa-linkedin-in "></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="assets/js/reserve.js">
+    </script>
 </body>
-
-<script>
-    function f() {
-
-        var d = document.getElementById('s1');
-        var d2 = document.getElementById('s2');
-        var jj = d2.options.length;
-        var j;
-        for (j = 1; j < jj; j++) {
-            d2.options[j].remove();
-        }
-
-
-        var dd = d.options[d.selectedIndex].text;
-        if (dd == 'Moto') {
-
-
-            var vr = document.createElement('option');
-            vr.textContent = 'Electrique';
-            d2.appendChild(vr);
-            var vr = document.createElement('option');
-            vr.textContent = 'Essence';
-            d2.appendChild(vr);
-
-
-        }
-        if (dd == 'Citadine') {
-
-
-
-            var vr = document.createElement('option');
-            vr.textContent = 'Electrique';
-            d2.appendChild(vr);
-            var vr = document.createElement('option');
-            vr.textContent = 'Hybride';
-            d2.appendChild(vr);
-            var vr = document.createElement('option');
-            vr.textContent = 'Essence';
-            d2.appendChild(vr);
-            var vr = document.createElement('option');
-            vr.textContent = 'Diesel';
-            d2.appendChild(vr);
-
-
-
-        }
-        if (dd == 'Compact') {
-            var vr = document.createElement('option');
-            vr.textContent = 'Hybride';
-            d2.appendChild(vr);
-            var vr = document.createElement('option');
-            vr.textContent = 'Essence';
-            d2.appendChild(vr);
-            var vr = document.createElement('option');
-            vr.textContent = 'Diesel';
-            d2.appendChild(vr);
-        }
-        if (dd == 'Berline') {
-            var vr = document.createElement('option');
-            vr.textContent = 'Hypride';
-            d2.appendChild(vr);
-            var vr = document.createElement('option');
-            vr.textContent = 'Essence';
-            d2.appendChild(vr);
-            var vr = document.createElement('option');
-            vr.textContent = 'Diesel';
-            d2.appendChild(vr);
-        }
-        if (dd == 'Utilitaire') {
-            var vr = document.createElement('option');
-            vr.textContent = 'Diesel';
-            d2.appendChild(vr);
-        }
-        if (dd == 'Engin de chantier') {
-            var vr = document.createElement('option');
-            vr.textContent = 'Essence';
-            d2.appendChild(vr);
-            var vr = document.createElement('option');
-            vr.textContent = 'Diesel';
-            d2.appendChild(vr);
-        }
-        if (dd == 'Camio') {
-            var vr = document.createElement('option');
-            vr.textContent = 'Diesel';
-            d2.appendChild(vr);
-        }
-    }
-</script>
-
-<style>
-    body {
-        height: 100vh;
-        width: 100%;
-        margin: 0;
-        font-family: 'open sans';
-        background-image: url(assets/images/A14.jpg);
-    }
-    
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-family: 'Open Sans', sans-serif;
-        color: #fff;
-    }
-    
-    select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        appearance: none;
-        outline: 0;
-        box-shadow: none;
-        border: 0!important;
-        background: #5c6664;
-        background-image: none;
-        flex: 1;
-        padding: 0 .5em;
-        color: #fff;
-        cursor: pointer;
-        font-size: 1em;
-        font-family: 'Open Sans', sans-serif;
-    }
-    
-    select::-ms-expand {
-        display: none;
-    }
-    
-    #d1 #d2 {
-        position: relative;
-        display: flex;
-        width: 30em;
-        height: 30em;
-        line-height: 3;
-        background: #5c6664;
-        overflow: hidden;
-        border-radius: .25em;
-    }
-    
-    #d1 #d2::after {
-        content: '\25BC';
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0 1em;
-        background: #2b2e2e;
-        cursor: pointer;
-        pointer-events: none;
-        transition: .25s all ease;
-    }
-    
-    #d1 #d2:hover::after {
-        color: #23b499;
-    }
-</style>
 
 </html>

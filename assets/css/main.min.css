@@ -28,10 +28,10 @@
         font-size: 1.5rem;
     }
     
-    ul li {
+    ul li a {
         font-size: 2.3rem;
         font-family: bold;
-        color: white;
+        color: #ffff;
     }
     
     a {

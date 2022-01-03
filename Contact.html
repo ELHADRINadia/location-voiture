@@ -32,11 +32,11 @@
                 <div class="left"></div>
                 <div class="right">
                     <h2>Contact Nous</h2>
-                    <input type="text" class="field" placeholder="Votre Nom">
-                    <input type="text" class="field" placeholder="Votre Email">
-                    <input type="text" class="field" placeholder="Tel">
-                    <textarea placeholder="Message" class="field"></textarea>
-                    <button class="btn">Envoyer</button>
+                    <input type="text" class="field" id="c1" placeholder="Votre Nom">
+                    <input type="text" class="field" id="c2" placeholder="Votre Email">
+                    <input type="text" class="field" id="c3" placeholder="Tel">
+                    <textarea placeholder="Message" id="c4" class="field"></textarea>
+                    <button class="btn" onclick=" verfier()">Envoyer</button>
                 </div>
             </div>
         </div>
@@ -54,34 +54,33 @@
 
 
     <footer class="footer">
-        <div class="container">
+        <div class="containent">
             <div class="row">
                 <div class="footer-col">
-                    <h4>company</h4>
+                    <h4>Entreprise</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
+                        <li><a href="#">index</a></li>
+                        <li><a href="#">Gallerie</a></li>
+                        <li><a href="#">Reservation</a></li>
+                        <li><a href="#">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>get help</h4>
+                    <h4>Obtenir de l'aide</h4>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
                         <li><a href="#">returns</a></li>
                         <li><a href="#">order status</a></li>
                         <li><a href="#">payment options</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>online shop</h4>
+                    <h4>Enline Reserve</h4>
                     <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
+                        <li><a href="#">Moto</a></li>
+                        <li><a href="#">Citadine</a></li>
+                        <li><a href="#">camio</a></li>
+                        <li><a href="#">Utilitaire</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -96,7 +95,19 @@
             </div>
         </div>
     </footer>
+    <!-- <script src="assets/js/conta.js"></script> -->
+    <script>
+        function verfier() {
 
+            var name = document.getElementById('c1').value;
+            var Email = document.getElementById('c2').value;
+            var Tel = document.getElementById('c3').value;
+            var message = document.getElementById('c4').value;
+            alert("Bonjour" + name + "\n" + Email + "\n" + Tel + "\n" + message);
+
+
+        }
+    </script>
 </body>
 
 

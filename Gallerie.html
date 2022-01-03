@@ -19,7 +19,7 @@
             <ul>
                 <li> <a href="index.html">Home</a></li>
                 <li> <a href="Gallerie.html">Gallerie</a></li>
-                <li> <a href="#">Réservation</a></li>
+                <li> <a href="Réservation.html">Réservation</a></li>
                 <li> <a href="Contact.html">Contact</a></li>
 
             </ul>
@@ -62,31 +62,30 @@
         <div class="containent">
             <div class="row">
                 <div class="footer-col">
-                    <h4>company</h4>
+                    <h4>Entreprise</h4>
                     <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
+                        <li><a href="#">index</a></li>
+                        <li><a href="#">Gallerie</a></li>
+                        <li><a href="#">Reservation</a></li>
+                        <li><a href="#">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>get help</h4>
+                    <h4>Obtenir de l'aide</h4>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
                         <li><a href="#">returns</a></li>
                         <li><a href="#">order status</a></li>
                         <li><a href="#">payment options</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>online shop</h4>
+                    <h4>Enline Reserve</h4>
                     <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
+                        <li><a href="#">Moto</a></li>
+                        <li><a href="#">Citadine</a></li>
+                        <li><a href="#">camio</a></li>
+                        <li><a href="#">Utilitaire</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -101,6 +100,57 @@
             </div>
         </div>
     </footer>
+    <!-- <script>
+        const filterItem = document.querySelector(".items");
+        const filterImg = document.querySelectorAll(".gallery .image");
+
+        window.onload = () => {
+            filterItem.onclick = (selectedItem) => {
+                if (selectedItem.target.classList.contains("item")) {
+                    filterItem.querySelector(".active").classList.remove("active");
+                    selectedItem.target.classList.add("active");
+                    let filterName = selectedItem.target.getAttribute("data-name");
+                    filterImg.forEach((image) => {
+                        let filterImges = image.getAttribute("data-name");
+
+                        if ((filterImges == filterName) || (filterName == "all")) {
+                            image.classList.remove("hide");
+                            image.classList.add("show");
+                        } else {
+                            image.classList.add("hide");
+                            image.classList.remove("show");
+                        }
+                    });
+                }
+            }
+            for (let i = 0; i < filterImg.length; i++) {
+                filterImg[i].setAttribute("onclick", "preview(this)");
+            }
+        }
+
+
+        const previewBox = document.querySelector(".preview-box"),
+            categoryName = previewBox.querySelector(".title p"),
+            previewImg = previewBox.querySelector("img"),
+            closeIcon = previewBox.querySelector(".icon"),
+            shadow = document.querySelector(".shadow");
+
+        function preview(element) {
+
+            document.querySelector("body").style.overflow = "hidden";
+            let selectedPrevImg = element.querySelector("img").src;
+            let selectedImgCategory = element.getAttribute("data-name");
+            previewImg.src = selectedPrevImg;
+            categoryName.textContent = selectedImgCategory;
+            previewBox.classList.add("show");
+            shadow.classList.add("show");
+            closeIcon.onclick = () => {
+                previewBox.classList.remove("show");
+                shadow.classList.remove("show");
+                document.querySelector("body").style.overflow = "auto";
+            }
+        }
+    </script> -->
 </body>
 
 </html>
