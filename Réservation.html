@@ -15,7 +15,7 @@
 <body>
     <header class="main-head">
         <nav>
-            <h1>Location voiture</h1>
+            <h1>Location Voiture</h1>
             <ul>
                 <li> <a href="index.html">Home</a></li>
                 <li> <a href="Gallerie.html">Gallerie</a></li>
@@ -25,136 +25,105 @@
             </ul>
         </nav>
     </header>
-    <form>
-        <div id="fieldset">
+    <h2>Type de véhicule</h2>
 
-            <div id="Vehicle_type">
-                <label>choose a car type</label>
-                <br>
-                <span class="Radio_button">
-                <input onclick="Vehicle_type(this.value)" value="Moto" type="radio" name="vehicle-type" id="Moto">
-                <label for="Moto">Motorcycle</label>  
-                <span>10£/Day</span>
-                </span>
-                <span class="Radio_button">
-                <input onclick="Vehicle_type(this.value)" value="Citadine" type="radio" name="vehicle-type" id="Citadine">
-                <label for="Citadine">Citadine(Supermini)</label>
-                <span>12£/Day</span>
-                </span>
-                <span class="Radio_button">
-                <input onclick="Vehicle_type(this.value)" value="Compact" type="radio" name="vehicle-type" id="Compact">
-                <label for="Compact">Compact</label> 
-                <span>14£/Day</span>
-                </span>
-                <span class="Radio_button">
-                <input onclick="Vehicle_type(this.value)" value="Berline" type="radio" name="vehicle-type" id="Berline">
-                <label for="Berline">Berline</label>
-                <span>20£/Day</span>
-                </span>
-                <span class="Radio_button">
-                <input onclick="Vehicle_type(this.value)" value="Uv" type="radio" name="vehicle-type" id="Uv">
-                <label for="Uv">Utility vehicle</label>  
-                <span>16£/Day</span>
-                </span>
-                <span class="Radio_button">
-                <input onclick="Vehicle_type(this.value)" value="Cm" type="radio" name="vehicle-type" id="Cm">
-                <label for="Cm">Construction machinery</label> 
-                <span>900£/Day</span>
-                </span>
-                <span class="Radio_button">
-                <input onclick="Vehicle_type(this.value)" value="Truck" type="radio" name="vehicle-type" id="Truck">
-                <label for="Truck">Truck</label>
-                <span>250£/Day</span>
-                </span>
-            </div>
-            <div id="transmission">
-                <p><span>Transmission: </span> <span id="ts"></span></p>
-            </div>
-            <div id="radiobuttons">
-                <label for="">Power type: </label>
-                <span>
-                <input name="energy-type" class="energy-type" type="radio" value="Electic">
-                <label>Electic</label>
-    
-            </span>
-                <span>
-                <input name="energy-type" class="energy-type" type="radio" value="Hybrid">
-                <label>Hybrid</label>
-                
-            </span>
-                <span>
-                <input name="energy-type" class="energy-type" type="radio" value="Gasoline">
-                <label>Gasoline</label>
-                
-            </span>
-                <span>
-                <input name="energy-type" class="energy-type" type="radio" value="Diesel">
-                <label>Diesel</label>
-                
-            </span>
-            </div>
-            <div id="time">
-                <p>Enter how many days: </p>
-                <span><input placeholder="Days"  min="1" id="days" type="number" ></span>
-            </div>
-            <div id="calc">
-                <button onclick="calculate()">Calculate</button>
-            </div>
-            <div id="result">
-                <p>
-                    <span>money is:</span>
-                    <span id="result_p"></span>
-                </p>
-            </div>
+    <div class="type">
+        <img class="slide" id="moto" src="assets/images/moto.jpg" alt="motorcycle" onclick="choix(this.id)">
+        <img class="slide" id="compact" src="assets/images/A19.jpg" alt="compact-car" onclick="choix(this.id)">
+        <img class="slide" id="citadine" src="assets/images/A6.jpg" alt="citadine-car" onclick="choix(this.id)">
+        <img class="slide" id="utilitaire" src="assets/images/utilitaire.jpg" alt="utilitaire-car" onclick="choix(this.id)">
+        <img class="slide" id="berlin" src="assets/images/A16.jpg" alt="berlin-car" onclick="choix(this.id)">
+        <img class="slide" id="truck" src="assets/images/EN_ch.png" alt="truck" onclick="choix(this.id)">
+        <img class="slide" id="cm" src="assets/images/camio1.jpg" alt="construction-machine" onclick="choix(this.id)">
+    </div>
 
+
+    <h2>Select your fuel type</h2>
+    <form class="feul">
+        <div class="carburant">
+            <input type="radio" id="essence" name="radio" value="0.14" onclick="fuelP(this.value)">
+            <label for="essence"><span>Essence</span></label>
+        </div>
+        <div class="carburant">
+            <input type="radio" id="diesel" name="radio" value="0.21" onclick="fuelP(this.value)">
+            <label for="diesel"><span>Diesel</span></label>
+        </div>
+        <div class="carburant">
+            <input type="radio" id="electrique" name="radio" value="0.05" onclick="fuelP(this.value)">
+            <label for="electrique"><span>Electrique</span></label>
+        </div>
+        <div class="carburant">
+            <input type="radio" id="hybride" name="radio" value="0.09" onclick="fuelP(this.value)">
+            <label for="hybride"><span>Hypride</span></label>
+        </div>
+    </form>
+
+    <!-----------------------gear box----------------------->
+
+    <h2>Select your gear box type</h2>
+    <form class="gear-box">
+        <div class="gear" id="manual1">
+            <input type="radio" id="manual" name="gear" value="manual">
+            <label for="manual"> <span> Manual </span> </label>
+        </div>
+        <div class="gear" id="automatic1">
+            <input type="radio" id="automatic" name="gear" value="automatic">
+            <label for="automatic"> <span> Automatic </span></label>
         </div>
     </form>
 
 
-    <footer class="footer ">
-        <div class="containent ">
-            <div class="row ">
-                <div class="footer-col ">
+    <h2>Reservation duration</h2>
+    <div class="duration">
+        <label for="date"><span> Duration </span> :</label>
+        <input type="number" id="days" name="days">
+    </div>
+    <div class="submit-1">
+        <input type="submit" name="" value="Submit" onclick="calc()" class="submit">
+    </div>
+    <footer class="footer">
+        <div class="containent">
+            <div class="row">
+                <div class="footer-col">
                     <h4>Entreprise</h4>
                     <ul>
-                        <li><a href="# ">index</a></li>
-                        <li><a href="# ">Gallerie</a></li>
-                        <li><a href="# ">Reservation</a></li>
-                        <li><a href="# ">Contact us</a></li>
+                        <li><a href="#">index</a></li>
+                        <li><a href="#">Gallerie</a></li>
+                        <li><a href="#">Reservation</a></li>
+                        <li><a href="#">Contact us</a></li>
                     </ul>
                 </div>
-                <div class="footer-col ">
+                <div class="footer-col">
                     <h4>Obtenir de l'aide</h4>
                     <ul>
-                        <li><a href="# ">FAQ</a></li>
-                        <li><a href="# ">returns</a></li>
-                        <li><a href="# ">order status</a></li>
-                        <li><a href="# ">payment options</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
                     </ul>
                 </div>
-                <div class="footer-col ">
+                <div class="footer-col">
                     <h4>Enline Reserve</h4>
                     <ul>
-                        <li><a href="# ">Moto</a></li>
-                        <li><a href="# ">Citadine</a></li>
-                        <li><a href="# ">camio</a></li>
-                        <li><a href="# ">Utilitaire</a></li>
+                        <li><a href="#">Moto</a></li>
+                        <li><a href="#">Citadine</a></li>
+                        <li><a href="#">camio</a></li>
+                        <li><a href="#">Utilitaire</a></li>
                     </ul>
                 </div>
-                <div class="footer-col ">
+                <div class="footer-col">
                     <h4>follow us</h4>
-                    <div class="social-links ">
-                        <a href="# "><i class="fab fa-facebook-f "></i></a>
-                        <a href="# "><i class="fab fa-twitter "></i></a>
-                        <a href="# "><i class="fab fa-instagram "></i></a>
-                        <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="assets/js/reserve.js">
-    </script>
+    <script src="assets/js/reserve.js"></script>
 </body>
 
 </html>

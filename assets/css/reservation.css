@@ -1,276 +1,110 @@
-* {
-    color: rgb(255, 255, 255);
-    font-family: "Bebas Neue";
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body {
+    background-color: #1E1E1E;
+    font-family: 'Roboto', sans-serif;
 }
 
-#close {
-    display: none;
-}
-
-.burger {
-    display: none;
-    align-self: center;
-    justify-self: center;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-}
-
-#fieldset {
-    padding: 6% 0;
-    width: 100%;
-    margin: 0 auto;
+h2 {
     text-align: center;
-    align-items: flex-start;
-    display: grid;
+    color: #FC9918;
+    margin-top: 50px;
+}
+
+.type img {
+    height: 230px;
+    border-radius: 25px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+p {
+    color: #FC9918;
+    font-family: 'poppins';
+    display: flex;
+}
+
+.type {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-bottom: -20px;
+    height: 350px;
+}
+
+.slide {
+    display: inline-block;
+}
+
+.slide:hover {
+    height: 280px;
+    border: 5px solid #FC9918;
+}
+
+.type::-webkit-scrollbar {
+    display: none;
+}
+
+.feul {
+    color: #FC9918;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 1rem;
+    display: flex;
     justify-content: center;
-    grid-gap: 15px;
-    grid-template-columns: 30% 30%;
-    grid-template-rows: auto auto auto 40px;
-    background-color: rgb(94, 93, 93);
-    grid-template-areas: "ct ts" "ct pt" "ct d" "rs bt";
 }
 
-#Vehicle_type {
-    align-self: stretch;
-    grid-area: ct;
-    align-items: flex-start;
-    flex-direction: column;
-    display: flex;
-    border-radius: 20px;
-    padding: 2%;
-    background-color: rgb(83, 77, 77);
+span {
+    font-size: 2rem;
 }
 
-#Vehicle_type label {
-    align-self: center;
-    font-size: 20px;
+.carburant {
+    margin-right: 5%;
 }
 
-#transmission {
-    border-radius: 20px;
-    padding: 2%;
-    background-color: rgb(83, 77, 77);
+.carburant:last-child {
+    margin-right: 0;
 }
 
-#ts {
-    color: rgb(0, 0, 0);
-}
 
-#result_p {
-    color: black;
-}
+/*------gear box------*/
 
-#radiobuttons label {
+.gear-box {
+    color: #FC9918;
     text-align: center;
-    font-size: 20px;
-}
-
-#radiobuttons {
-    grid-area: pt;
-    align-items: flex-start;
-    flex-direction: column;
+    margin-top: 2%;
     display: flex;
-    border-radius: 20px;
-    padding: 2%;
-    background-color: rgb(83, 77, 77);
+    justify-content: center;
 }
 
-#time {
-    grid-area: d;
-    align-content: center;
-    flex-direction: column;
+.gear {
+    margin-right: 5%;
+}
+
+.gear:last-child {
+    margin-right: 0;
+}
+
+
+/*------duration------*/
+
+.duration {
+    color: #FC9918;
+    text-align: center;
+    margin-top: 2%;
     display: flex;
-    border-radius: 20px;
-    padding: 2%;
-    background-color: rgb(83, 77, 77);
+    justify-content: center;
 }
 
-#time p {
-    text-align: center;
-    font-size: 20px;
+.submit-1 {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
 }
 
-#time span input {
-    outline: none;
-    border-radius: 20px;
-    text-align: center;
-    width: 100%;
-    font-size: 20px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    color: rgb(94, 91, 88);
-}
-
-#calc button {
+.submit {
+    background-color: #FC9918;
+    color: #1E1E1E;
+    padding: 12px 21px;
     border: none;
-    background-color: rgb(83, 77, 77);
-    border-radius: 10px;
-    padding: 12px 20px;
-    text-align: center;
-    grid-area: bt;
-}
-
-#result {
-    background-color: rgb(83, 77, 77);
-    border-radius: 10px;
-    padding: 12px 20px;
-    text-align: center;
-    grid-area: rs;
-}
-
-@media only screen and (max-width:415px) {
-    .burger {
-        display: inline;
-        right: 5%;
-        top: 35%;
-        position: absolute;
-    }
-    .burger div {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 5px;
-    }
-    #close {
-        font-family: sans-serif;
-        font-size: 30px;
-        width: 25px;
-        color: white;
-        right: 6%;
-        top: 13%;
-        position: absolute;
-        display: none;
-    }
-    /* ul {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        gap: 25px;
-        list-style-type: none;
-    }
-    ul a {
-        text-decoration: none;
-        margin: auto;
-        font-family: "Montserrat";
-        color: #D1C7C7;
-        font-size: 1.5rem;
-        padding: 0px 25px;
-    }
-    nav img {
-        margin-top: 10px;
-        width: 100px;
-    }
-    nav {
-        position: relative;
-        background: #3a3a3a;
-        padding-left: 0%;
-        gap: 10%;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 2%;
-    } */
-    #fieldset {
-        padding: 6% 0;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        align-items: flex-start;
-        display: grid;
-        justify-content: center;
-        grid-gap: 15px;
-        grid-template-columns: 90%;
-        grid-template-rows: repeat(6, auto);
-        background-color: rgb(94, 93, 93);
-        grid-template-areas: "ct " "ts" "pt" "d" "rs" "bt";
-    }
-    #Vehicle_type {
-        align-self: stretch;
-        grid-area: ct;
-        align-items: flex-start;
-        flex-direction: column;
-        display: flex;
-        border-radius: 20px;
-        padding: 2%;
-        background-color: rgb(83, 77, 77);
-    }
-    #Vehicle_type label {
-        align-self: center;
-        font-size: 20px;
-    }
-    #transmission {
-        border-radius: 20px;
-        padding: 2%;
-        background-color: rgb(83, 77, 77);
-    }
-    #ts {
-        color: rgb(0, 0, 0);
-    }
-    #result_p {
-        color: black;
-    }
-    #radiobuttons label {
-        text-align: center;
-        font-size: 20px;
-    }
-    #radiobuttons {
-        grid-area: pt;
-        align-items: flex-start;
-        flex-direction: column;
-        display: flex;
-        border-radius: 20px;
-        padding: 2%;
-        background-color: rgb(83, 77, 77);
-    }
-    #time {
-        grid-area: d;
-        align-content: center;
-        flex-direction: column;
-        display: flex;
-        border-radius: 20px;
-        padding: 2%;
-        background-color: rgb(83, 77, 77);
-    }
-    #time p {
-        text-align: center;
-        font-size: 20px;
-    }
-    #time span input {
-        outline: none;
-        border-radius: 20px;
-        text-align: center;
-        width: 100%;
-        font-size: 20px;
-        padding: 12px 20px;
-        margin: 8px 0;
-        color: rgb(94, 91, 88);
-    }
-    #calc button {
-        border: none;
-        background-color: rgb(83, 77, 77);
-        border-radius: 10px;
-        padding: 12px 20px;
-        text-align: center;
-        grid-area: bt;
-    }
-    #result {
-        background-color: rgb(83, 77, 77);
-        border-radius: 10px;
-        padding: 12px 20px;
-        text-align: center;
-        grid-area: rs;
-    }
-}
-
-
+    border-radius: 20px;
+    cursor: pointer;
 }

@@ -84,6 +84,11 @@ body {
     animation: animate 0.4s ease;
 }
 
+.image {
+    width: 40%;
+    height: 40%;
+}
+
 @keyframes animate {
     0% {
         transform: scale(0.5);

@@ -7,5 +7,5 @@ function verfier() {
     if (elts[0].value != "" && elts[1].value != "" && elts[2].value != "" && elts[3].value != "") {
         alert("Bonjour" + name + "/n" + Email + "/n" + Tel + "/n" + message);
     } else
-        alert("rempler votre champs");
+        alert("remplir votre champs");
 }
